@@ -1,0 +1,33 @@
+<h3>Update ToDo</h3>
+
+
+<form>
+    <p>Id</p>
+        <input name="Id" placeholder="Id" [(ngModel)]="todo.id" type="number"/>
+
+    <p>Description</p>
+        <input name="Description" placeholder="description" [(ngModel)]="todo.description" type="text" />
+    
+        <br/>
+
+    <p>Is Completed?</p>
+        <input name="Is Completed" placeholder="Is Completed?" [(ngModel)]="todo.isCompleted" type="checkbox" />
+
+        <br/>
+
+    <button (click)="updateToDos()">Update Data</button>
+
+</form>
+
+<p>{{todo.id}}</p>
+<p>{{todo.description}}</p>
+<p>{{todo.isCompleted}}</p>
+
+<br>
+
+<div *ngFor="let t of todos">
+    <p>Id: {{t.id}}</p> 
+    <p>Description: {{t.description}}</p>
+    <p>Is Completed: {{t.isCompleted}}</p>
+    <br>
+</div>
